@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
     <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-    <updated>2019-08-21T13:06:11+02:00</updated>
+    <updated>2019-08-21T14:11:59+02:00</updated>
     <id>http://localhost:4000/feed.xml</id>
     <title>Onno Eberhard</title>
     <subtitle>Blog</subtitle>
@@ -20,8 +20,8 @@
         <entry>
             <title>Cool logic in the face of fire</title>
             <link href="http://localhost:4000/2019/08/21/cool-logic.html" rel="alternate" type="text/html" title="Cool logic in the face of fire"/>
-            <updated>2019-08-21T13:06:11+02:00</updated>
-            <published>2019-08-21T13:06:11+02:00</published>
+            <updated>2019-08-21T13:07:00+02:00</updated>
+            <published>2019-08-21T13:07:00+02:00</published>
             <id>http://localhost:4000/2019/08/21/cool-logic</id>
             <content type="html" xml:base="http://localhost:4000/2019/08/21/cool-logic.html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/syntax_prolog.css&quot; /&gt;
 
@@ -37,6 +37,8 @@
 &lt;p&gt;In &lt;em&gt;Philosopher’s Stone&lt;/em&gt;, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/cool-logic/potions.jpg&quot; alt=&quot;Potions -fullwidth&quot; /&gt;&lt;/p&gt;
+
+&lt;!-- more --&gt;
 
 &lt;p&gt;&lt;i style=&quot;text-align: center; display: block; line-height: 170%&quot;&gt;
 Danger lies before you, while safety lies behind, &lt;br /&gt;
@@ -132,59 +134,7 @@ true.
                 <email>onnoeberhard@gmail.com</email>
             </author>
             
-                <summary type="html">&amp;ldquo;Well, look at it logically,&amp;rdquo; said Hermione, turning to the rest of the group. &amp;ldquo;I mean, Binky didn't even die today, did he? Lavender just got the news today.&amp;rdquo; Lavender wailed loudly. &amp;mdash; Hermione Granger in Prisoner of Azkaban Again and again Hermione manages to demonstrate her emotional range being that of a robotic teaspoon. Because of that, I think it would be fair to build our very own Hermione (using Prolog), and try and win ourselves “50 points for Gryffindor”! In Philosopher’s Stone, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle: Danger lies before you, while safety lies behind, Two of us will help you, whichever you would find, One among us seven will let you move ahead, Another will transport the drinker back instead, Two among our number hold only nettle wine, Three of us are killers, waiting hidden in line. Choose, unless you wish to stay here forevermore, To help you in your choice, we give you these clues four: First, however slyly the poison tries to hide You will always find some on nettle wine’s left side; Second, different are those who stand at either end, But if you would move onward, neither is your friend; Third, as you see clearly, all are different size, Neither dwarf nor giant holds death in their insides; Fourth, the second left and the second on the right Are twins once you taste them, though different at first sight Harry might be the most capable of the lot emotionally, but sadly he did not win the lottery when it comes to brain power. Because of this, it’ll have to be Hermione who solves Snape’s riddle. Here she is: :- use_module(library(clpfd)). ahead(1). back(2). wine(3). poison(4). hermione :- Flasks = [First, SecondLeft, _, _, _, SecondRight, Last], Sizes = [_, _, Dwarf, _, _, Giant, _], % Taken from the picture, not mentioned in book. Flasks ins 1..4, Flasks = Sizes, First #\= Last, % Different are those who stand at either end, First #\= 1, % But if you would move onward, Last #\= 1, % neither is your friend; Dwarf #\= 4, % Neither dwarf- Giant #\= 4, % nor giant holds death in their insides; SecondLeft #= SecondRight, % The second left and the second on the right are twins .. labeling([], Flasks), count(Flasks, 1, 1), % One among us seven will let you move ahead, count(Flasks, 2, 1), % Another will transport the drinker back instead, count(Flasks, 3, 2), % Two among our number hold only nettle wine, count(Flasks, 4, 3), % Three of us are killers, waiting hidden in line. (actually implied) poison_left_of_wine(Flasks), % However slyly the poison tries to hide, you will always find some on nettle wine’s left side; write_names(Flasks), !. % Predicate for checking if the estimate contains the correct number of each substance count(L, X, N) :- findall(P, (member(P, L), P = X), CP), length(CP, N). % Predicates for checking if there is always poison on &quot;nettle wine's left side&quot; poison_left_of_wine([_]). poison_left_of_wine([H|T]) :- poison_left_of_wine(T), T = [X|_], poison_left_of_wine(H, X). poison_left_of_wine(_, W) :- not(wine(W)). poison_left_of_wine(P, _) :- poison(P). % Predicates for writing out the result write_names([]). write_names([H|T]) :- (ahead(H), write(&quot;Ahead Potion&quot;); back(H), write(&quot;Back Potion&quot;); wine(H), write(&quot;Nettle Wine&quot;); poison(H), write(&quot;Poison&quot;)), comma(T), write_names(T), !. comma([]) :- !. comma(_) :- write(&quot;, &quot;). All we have to do is call her: ?- hermione. Poison, Nettle Wine, Ahead Potion, Poison, Poison, Nettle Wine, Back Potion true. Is this fan-fiction? Source of the picture: Pottermore</summary>
-            
-            
-            
-
-            
-            
-        </entry>
-    
-        <entry>
-            <title>A mathematical bike ride</title>
-            <link href="http://localhost:4000/2019/07/07/bike-ride.html" rel="alternate" type="text/html" title="A mathematical bike ride"/>
-            <updated>2019-07-07T11:07:58+02:00</updated>
-            <published>2019-07-07T11:07:58+02:00</published>
-            <id>http://localhost:4000/2019/07/07/bike-ride</id>
-            <content type="html" xml:base="http://localhost:4000/2019/07/07/bike-ride.html">&lt;p&gt;Here in Duisburg there is a bike-renting service called “Metropolrad Ruhr”. There are many problems with the bikes and far too few stations. There is also a curiosity about the bikes concerning their baskets. The baskets are attached at at the front of the bike in such a way, that it moves with the frame, not the handle. If you’re not used to it, the lack of rotation of the basket when turning the handle, can be very confusing. To illustrate what I mean by this, watch the following short video.&lt;/p&gt;
-
-</content>
-            <author>
-                <name>Onno Eberhard</name>
-                <uri>https://onnoeberhard.com</uri>
-                <email>onnoeberhard@gmail.com</email>
-            </author>
-            
-                <summary type="html">Here in Duisburg there is a bike-renting service called “Metropolrad Ruhr”. There are many problems with the bikes and far too few stations. There is also a curiosity about the bikes concerning their baskets. The baskets are attached at at the front of the bike in such a way, that it moves with the frame, not the handle. If you’re not used to it, the lack of rotation of the basket when turning the handle, can be very confusing. To illustrate what I mean by this, watch the following short video.</summary>
-            
-            
-            
-
-            
-            
-        </entry>
-    
-        <entry>
-            <title>hofstadter</title>
-            <link href="http://localhost:4000/2019/06/13/hofstadter.html" rel="alternate" type="text/html" title="hofstadter"/>
-            <updated>2019-06-13T13:31:37+02:00</updated>
-            <published>2019-06-13T13:31:37+02:00</published>
-            <id>http://localhost:4000/2019/06/13/hofstadter</id>
-            <content type="html" xml:base="http://localhost:4000/2019/06/13/hofstadter.html">&lt;p&gt;Hofstadter Q-Sequence: https://oeis.org/A005185
-Fractional calculus: https://arxiv.org/abs/1208.2588v1
-https://doi.org/10.1016/j.cam.2012.06.034&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h4 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h4&gt;
-</content>
-            <author>
-                <name>Onno Eberhard</name>
-                <uri>https://onnoeberhard.com</uri>
-                <email>onnoeberhard@gmail.com</email>
-            </author>
-            
-                <summary type="html">Hofstadter Q-Sequence: https://oeis.org/A005185 Fractional calculus: https://arxiv.org/abs/1208.2588v1 https://doi.org/10.1016/j.cam.2012.06.034 Footnotes</summary>
+                <summary type="html">&amp;ldquo;Well, look at it logically,&amp;rdquo; said Hermione, turning to the rest of the group. &amp;ldquo;I mean, Binky didn't even die today, did he? Lavender just got the news today.&amp;rdquo; Lavender wailed loudly. &amp;mdash; Hermione Granger in Prisoner of Azkaban Again and again Hermione manages to demonstrate her emotional range being that of a robotic teaspoon. Because of that, I think it would be fair to build our very own Hermione (using Prolog), and try and win ourselves “50 points for Gryffindor”! In Philosopher’s Stone, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle:</summary>
             
             
             
@@ -909,30 +859,6 @@ But how does it help the plant that there exists this formula to compute the gol
             
                 
                 <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/having-a-blog/initial.png" />
-            
-        </entry>
-    
-        <entry>
-            <title>vid</title>
-            <link href="http://localhost:4000/2018/09/03/vid.html" rel="alternate" type="text/html" title="vid"/>
-            <updated>2018-09-03T09:58:37+02:00</updated>
-            <published>2018-09-03T09:58:37+02:00</published>
-            <id>http://localhost:4000/2018/09/03/vid</id>
-            <content type="html" xml:base="http://localhost:4000/2018/09/03/vid.html">&lt;iframe class=&quot;youtube&quot; width=&quot;100%&quot; src=&quot;https://www.youtube.com/embed/44GNzO79vzs?origin=https://blog.onnoeberhard.com/&amp;amp;showinfo=0&amp;amp;modestbranding=0&amp;amp;rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-</content>
-            <author>
-                <name>Onno Eberhard</name>
-                <uri>https://onnoeberhard.com</uri>
-                <email>onnoeberhard@gmail.com</email>
-            </author>
-            
-                <summary type="html"></summary>
-            
-            
-            
-
-            
             
         </entry>
     

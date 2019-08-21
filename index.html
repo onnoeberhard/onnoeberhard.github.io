@@ -84,8 +84,6 @@
                     </li>
                 
             
-                
-            
             <li class='sidebar-nav-item'>
                 <a href="https://onnoeberhard.com">Website</a>
             </li>
@@ -152,134 +150,9 @@
 
 <p><img src="/assets/cool-logic/potions.jpg" alt="Potions -fullwidth" /></p>
 
-<p><i style="text-align: center; display: block; line-height: 170%">
-Danger lies before you, while safety lies behind, <br />
-Two of us will help you, whichever you would find, <br />
-One among us seven will let you move ahead, <br />
-Another will transport the drinker back instead, <br />
-Two among our number hold only nettle wine, <br />
-Three of us are killers, waiting hidden in line. <br />
-Choose, unless you wish to stay here forevermore, <br />
-To help you in your choice, we give you these clues four: <br />
-First, however slyly the poison tries to hide <br />
-You will always find some on nettle wine’s left side; <br />
-Second, different are those who stand at either end, <br />
-But if you would move onward, neither is your friend; <br />
-Third, as you see clearly, all are different size, <br />
-Neither dwarf nor giant holds death in their insides; <br />
-Fourth, the second left and the second on the right <br />
-Are twins once you taste them, though different at first sight
-</i></p>
-
-<p>Harry might be the most capable of the lot <em>emotionally</em>, but sadly he did not win the lottery when it comes to brain power. Because of this, it’ll have to be Hermione who solves Snape’s riddle. Here she is:</p>
-
-<div class="language-prolog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">:-</span> <span class="ss">use_module</span><span class="p">(</span><span class="ss">library</span><span class="p">(</span><span class="ss">clpfd</span><span class="p">)).</span>
-
-<span class="ss">ahead</span><span class="p">(</span><span class="m">1</span><span class="p">).</span>
-<span class="ss">back</span><span class="p">(</span><span class="m">2</span><span class="p">).</span>
-<span class="ss">wine</span><span class="p">(</span><span class="m">3</span><span class="p">).</span>
-<span class="ss">poison</span><span class="p">(</span><span class="m">4</span><span class="p">).</span>
-
-<span class="ss">hermione</span> <span class="p">:-</span>
-    <span class="nv">Flasks</span> <span class="o">=</span> <span class="p">[</span><span class="nv">First</span><span class="p">,</span> <span class="nv">SecondLeft</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">SecondRight</span><span class="p">,</span> <span class="nv">Last</span><span class="p">],</span>
-    <span class="nv">Sizes</span> <span class="o">=</span> <span class="p">[</span><span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">Dwarf</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">Giant</span><span class="p">,</span> <span class="nv">_</span><span class="p">],</span>    <span class="c1">% Taken from the picture, not mentioned in book.</span>
-    <span class="nv">Flasks</span> <span class="ss">ins</span> <span class="m">1</span><span class="p">..</span><span class="m">4</span><span class="p">,</span>
-    <span class="nv">Flasks</span> <span class="o">=</span> <span class="nv">Sizes</span><span class="p">,</span>
-    <span class="nv">First</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="nv">Last</span><span class="p">,</span>                           <span class="c1">% Different are those who stand at either end,</span>
-    <span class="nv">First</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">1</span><span class="p">,</span>                              <span class="c1">% But if you would move onward,</span>
-    <span class="nv">Last</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">1</span><span class="p">,</span>                               <span class="c1">% neither is your friend;</span>
-    <span class="nv">Dwarf</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">4</span><span class="p">,</span>                              <span class="c1">% Neither dwarf-</span>
-    <span class="nv">Giant</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">4</span><span class="p">,</span>                              <span class="c1">% nor giant holds death in their insides; </span>
-    <span class="nv">SecondLeft</span> <span class="o">#=</span> <span class="nv">SecondRight</span><span class="p">,</span>                <span class="c1">% The second left and the second on the right are twins ..</span>
-    <span class="ss">labeling</span><span class="p">([],</span> <span class="nv">Flasks</span><span class="p">),</span>
-    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>                      <span class="c1">% One among us seven will let you move ahead,</span>
-    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>                      <span class="c1">% Another will transport the drinker back instead, </span>
-    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span>                      <span class="c1">% Two among our number hold only nettle wine,</span>
-    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">),</span>                      <span class="c1">% Three of us are killers, waiting hidden in line. (actually implied)</span>
-    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">),</span>              <span class="c1">% However slyly the poison tries to hide, you will always find some on nettle wine’s left side;</span>
-    <span class="ss">write_names</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">),</span> <span class="p">!.</span>
-
-<span class="c1">% Predicate for checking if the estimate contains the correct number of each substance</span>
-<span class="ss">count</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span>
-    <span class="ss">findall</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="p">(</span><span class="ss">member</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="nv">L</span><span class="p">),</span> <span class="nv">P</span> <span class="o">=</span> <span class="nv">X</span><span class="p">),</span> <span class="nv">CP</span><span class="p">),</span>
-    <span class="ss">length</span><span class="p">(</span><span class="nv">CP</span><span class="p">,</span> <span class="nv">N</span><span class="p">).</span>
-
-<span class="c1">% Predicates for checking if there is always poison on "nettle wine's left side"</span>
-<span class="ss">poison_left_of_wine</span><span class="p">([</span><span class="nv">_</span><span class="p">]).</span>
-<span class="ss">poison_left_of_wine</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span>
-    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span>
-    <span class="nv">T</span> <span class="o">=</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">_</span><span class="p">],</span>
-    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">H</span><span class="p">,</span> <span class="nv">X</span><span class="p">).</span>
-<span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">_</span><span class="p">,</span> <span class="nv">W</span><span class="p">)</span> <span class="p">:-</span>
-    <span class="ss">not</span><span class="p">(</span><span class="ss">wine</span><span class="p">(</span><span class="nv">W</span><span class="p">)).</span>
-<span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="nv">_</span><span class="p">)</span> <span class="p">:-</span>
-    <span class="ss">poison</span><span class="p">(</span><span class="nv">P</span><span class="p">).</span>
-
-<span class="c1">% Predicates for writing out the result</span>
-<span class="ss">write_names</span><span class="p">([]).</span>
-<span class="ss">write_names</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span>
-    <span class="p">(</span><span class="ss">ahead</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Ahead Potion"</span><span class="p">);</span>
-    <span class="ss">back</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Back Potion"</span><span class="p">);</span>
-    <span class="ss">wine</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Nettle Wine"</span><span class="p">);</span>
-    <span class="ss">poison</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Poison"</span><span class="p">)),</span>
-    <span class="ss">comma</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span>
-    <span class="ss">write_names</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span> <span class="p">!.</span>
-<span class="ss">comma</span><span class="p">([])</span> <span class="p">:-</span> <span class="p">!.</span>
-<span class="ss">comma</span><span class="p">(</span><span class="nv">_</span><span class="p">)</span> <span class="p">:-</span> <span class="ss">write</span><span class="p">(</span><span class="s2">", "</span><span class="p">).</span>
-</code></pre></div></div>
-
-<p>All we have to do is call her:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?- hermione.
-Poison, Nettle Wine, Ahead Potion, Poison, Poison, Nettle Wine, Back Potion
-true.
-</code></pre></div></div>
-
-<p>Is this fan-fiction?</p>
-
-<hr />
-<p><em>Source of the picture: <a href="https://www.pottermore.com/features/every-harry-potter-puzzle-hermione-solved-that-made-us-kick-ourselves">Pottermore</a></em></p>
 
 
         <a style="color:#0ab246" href="/2019/08/21/cool-logic.html"><i>Continue reading</i></a>
-    </div>
-    <hr>
-    
-    <div class="post">
-        <h1 class="post-title">
-            <a href="/2019/07/07/bike-ride.html">
-                A mathematical bike ride
-            </a>
-        </h1>
-
-        <span class="post-date">07 Jul 2019</span>
-
-        <p>Here in Duisburg there is a bike-renting service called “Metropolrad Ruhr”. There are many problems with the bikes and far too few stations. There is also a curiosity about the bikes concerning their baskets. The baskets are attached at at the front of the bike in such a way, that it moves with the frame, not the handle. If you’re not used to it, the lack of rotation of the basket when turning the handle, can be very confusing. To illustrate what I mean by this, watch the following short video.</p>
-
-
-
-        <a style="color:#0ab246" href="/2019/07/07/bike-ride.html"><i>Continue reading</i></a>
-    </div>
-    <hr>
-    
-    <div class="post">
-        <h1 class="post-title">
-            <a href="/2019/06/13/hofstadter.html">
-                hofstadter
-            </a>
-        </h1>
-
-        <span class="post-date">13 Jun 2019</span>
-
-        <p>Hofstadter Q-Sequence: https://oeis.org/A005185
-Fractional calculus: https://arxiv.org/abs/1208.2588v1
-https://doi.org/10.1016/j.cam.2012.06.034</p>
-
-<hr />
-<h4 id="footnotes">Footnotes</h4>
-
-
-        <a style="color:#0ab246" href="/2019/06/13/hofstadter.html"><i>Continue reading</i></a>
     </div>
     <hr>
     
@@ -345,11 +218,47 @@ Close enough.</p>
     </div>
     <hr>
     
+    <div class="post">
+        <h1 class="post-title">
+            <a href="/2018/09/09/having-a-blog.html">
+                Having a blog
+            </a>
+        </h1>
+
+        <span class="post-date">09 Sep 2018</span>
+
+        <p>The first rule of writing is “Know your reader.” I don’t know my reader. In fact, there is no reader yet. So this makes things a bit more difficult, but I’ll try my best.</p>
+
+<p>To get a grasp of the audience, maybe some code can help us analyse the situation. To be realistic, I will assume that there are one million people currently reading this.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> They are randomly distributed on the so-called “Nerd Scale”:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>                             <span class="c1"># That's just the beginning!
+</span><span class="n">initial_readers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>    <span class="c1"># Draw N random people from the global population (normally distributed along nerd scale)
+</span></code></pre></div></div>
+
+<p>If we plot a histogram of the current readers regarding their nerd factors, this is what we get:</p>
+
+<p><img src="/assets/having-a-blog/initial.png" alt="Initial Readers -fullwidth" /></p>
+
+<p>To clarify how this scale works, one may refer to the table below:</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Proof (live analytics): <img src="https://img.shields.io/badge/Currently%20reading-~%201%20Million%20People-green.svg" style="display: inline; margin: 0 0 -4px 0;" /> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+        <a style="color:#0ab246" href="/2018/09/09/having-a-blog.html"><i>Continue reading</i></a>
+    </div>
+    <hr>
+    
 </div>
 
 <div class="pagination">
     
-    <a class="pagination-item older" href="/page2">Older</a>
+    <span class="pagination-item older">Older</span>
     
     
     <span class="pagination-item newer">Newer</span>

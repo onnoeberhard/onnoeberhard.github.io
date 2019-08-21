@@ -1,0 +1,228 @@
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic|Volkhov:400i|Patrick+Hand|IM+Fell+DW+Pica|Alegreya|PT+Serif);
+
+
+/* Social Buttons Sidebar */
+a.sideli {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 4px;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+a.sideli:hover {
+    opacity: 1;
+}
+
+/* Share Buttons */
+.share-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    margin: 4px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+    text-decoration: none !important;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.share-button:hover {
+    color: #fff;
+    background-color: #4f4f4f;
+}
+
+.share-button:active {
+    top: 1px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.share-button svg {
+    fill: #ffffff;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+}
+
+.share-button.facebook {
+    background-color: #4A66B7;
+}
+
+.share-button.facebook:hover {
+    background-color: #556fbb;
+}
+
+.share-button.twitter {
+    background-color: #1B95E0;
+}
+
+.share-button.twitter:hover {
+    background-color: #269ce5;
+}
+
+.share-button.pinterest {
+    background-color: #c92228;
+}
+
+.share-button.pinterest:hover {
+    background-color: #cf4146;
+}
+
+.share-button.linkedin {
+    background-color: #0077B5;
+}
+
+.share-button.linkedin:hover {
+    background-color: #1e84b9;
+}
+
+.share-button.reddit {
+    background-color: #5f99cf;
+}
+
+.share-button.reddit:hover {
+    background-color: #75a6d4;
+}
+
+.share-button.tumblr {
+    background-color: #35465c;
+}
+
+.share-button.tumblr:hover {
+    background-color: #455166;
+}
+
+.share-button.hacker-news {
+    background-color: #ff6600;
+}
+
+.share-button.hacker-news:hover {
+    background-color: #ff7515;
+}
+
+.share-button.designer-news {
+    background-color: #2d72d9;
+}
+
+.share-button.designer-news:hover {
+    background-color: #3d82e9;
+}
+
+.share-button.google-plus {
+    background-color: #fefefe;
+    /* color: #333; */
+    color: #DB4437;
+}
+
+.share-button.google-plus:hover {
+    background-color: #f6f6f6;
+    /* color: #333; */
+    color: #DB4437;
+}
+
+.share-button.google-plus svg {
+    fill: #DB4437;
+}
+
+img[alt$="-fullwidth"] {
+    width: 100%;
+    display: block;
+}
+
+pre {
+    white-space: pre;
+    overflow: auto;
+}
+
+.prettyh.heading {
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+h1.prettyh {
+    color: #000;
+    font-family: 'Cardo', serif;
+    font-size: .8em;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    line-height: 2.2em;
+}
+
+em.prettyh {
+    font-family: 'EB Garamond', serif;
+    font-size: 3.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+    display: block;
+    font-style: normal;
+    padding-top: 0.1em;
+    text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+}
+
+.projectlink.big {
+    text-align: center;
+}
+
+.projectlink a {
+    color: #000000;
+    /* font-size: 1.5rem; */
+    /* margin: 4px; */
+    text-decoration: none;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.op {
+    border-radius: 4px;
+    text-decoration: none !important;
+    transition: 0.3s;
+}
+
+.op:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.projectlink.big a{
+    font-size: 1.5rem
+}
+
+.projectlink a:hover {
+    opacity: 1 !important;
+}
+
+#me {
+    float: left;
+    margin: 0.5em 1em;
+    width: 30%
+}
+
+@media (max-width: 768px) {
+    #me {
+        width: 50%;
+        /* margin: 1em 0; */
+    }
+}
+
+.caption {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: .8rem
+}
+
+/* p > sup:only-child{
+    display: none;
+}
+
+p.caption > sup{
+    display: initial;
+} */

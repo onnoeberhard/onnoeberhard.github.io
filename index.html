@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Blog">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Onno Eberhard" />
+
+    <title>
+         Home &middot; Onno Eberhard 
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103079025-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-103079025-2');
+    </script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+                  displayMath: [ ['$$','$$'], ['\[','\]'] ]},
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+    <body>
+
+        <div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <h1><a href="/">Onno Eberhard</a></h1>
+            <p id="sidetext" class="lead">Blog</p> <!-- Blog -->
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class='sidebar-nav-item active'>
+                <a href="/">Home</a>
+            </li>
+
+            
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/about.html">About</a>
+                    </li>
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/archive.html">Archive</a>
+                    </li>
+                
+            
+                
+            
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/projects.html">Projects</a>
+                    </li>
+                
+            
+                
+            
+            <li class='sidebar-nav-item'>
+                <a href="https://onnoeberhard.com">Website</a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-nav" style="overflow: hidden; display:block;">
+            <li style="display: inline-block;">
+                <a href="https://twitter.com/onnoeberhard" target="_blank" class="sideli fab fa-twitter"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://github.com/onnoeberhard" target="_blank" class="sideli fab fa-github"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://www.linkedin.com/in/onnoeberhard" target="_blank" class="sideli fab fa-linkedin"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://medium.com/@onnoeberhard" target="_blank" class="sideli fab fa-medium-m"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="mailto:onnoeberhard@gmail.com" class="sideli fas fa-at"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="/feed.xml" class="sideli fas fa-rss"></a>
+            </li>
+        </ul>
+        
+        <!-- <p>&copy; 2019 &middot; Onno Eberhard</p> -->
+    </div>
+</div>
+
+
+        <div class="content container">
+            <!-- Hide footnotes in excerpts -->
+<style>
+    .footnote,
+    .footnotes {
+        display: none
+    }
+</style>
+
+<div class="posts">
+    
+    <div class="post">
+        <h1 class="post-title">
+            <a href="/2019/08/21/cool-logic.html">
+                Cool logic in the face of fire
+            </a>
+        </h1>
+
+        <span class="post-date">21 Aug 2019</span>
+
+        <link rel="stylesheet" href="/css/syntax_prolog.css" />
+
+<p style="margin-left: 20%; margin-right: 20%; font-size: .9rem; font-family: 'PT Serif', serif;">
+&ldquo;Well, look at it logically,&rdquo; said Hermione, turning to the rest of the group. &ldquo;I mean, Binky didn't even die today, did he? Lavender just got the news today.&rdquo; <br /><i>Lavender wailed loudly.</i>
+</p>
+<p style="margin-top: -1rem; margin-left: 20%; font-size: .9rem; margin-right: 20%; text-align: right; font-family: 'PT Serif', serif;">
+&mdash; Hermione Granger in <i>Prisoner of Azkaban</i>
+</p>
+
+<p>Again and again Hermione manages to demonstrate her emotional range being that of a robotic teaspoon. Because of that, I think it would be fair to build our very own Hermione (using Prolog), and try and win ourselves “50 points for Gryffindor”!</p>
+
+<p>In <em>Philosopher’s Stone</em>, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle:</p>
+
+<p><img src="/assets/cool-logic/potions.jpg" alt="Potions -fullwidth" /></p>
+
+<p><i style="text-align: center; display: block; line-height: 170%">
+Danger lies before you, while safety lies behind, <br />
+Two of us will help you, whichever you would find, <br />
+One among us seven will let you move ahead, <br />
+Another will transport the drinker back instead, <br />
+Two among our number hold only nettle wine, <br />
+Three of us are killers, waiting hidden in line. <br />
+Choose, unless you wish to stay here forevermore, <br />
+To help you in your choice, we give you these clues four: <br />
+First, however slyly the poison tries to hide <br />
+You will always find some on nettle wine’s left side; <br />
+Second, different are those who stand at either end, <br />
+But if you would move onward, neither is your friend; <br />
+Third, as you see clearly, all are different size, <br />
+Neither dwarf nor giant holds death in their insides; <br />
+Fourth, the second left and the second on the right <br />
+Are twins once you taste them, though different at first sight
+</i></p>
+
+<p>Harry might be the most capable of the lot <em>emotionally</em>, but sadly he did not win the lottery when it comes to brain power. Because of this, it’ll have to be Hermione who solves Snape’s riddle. Here she is:</p>
+
+<div class="language-prolog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">:-</span> <span class="ss">use_module</span><span class="p">(</span><span class="ss">library</span><span class="p">(</span><span class="ss">clpfd</span><span class="p">)).</span>
+
+<span class="ss">ahead</span><span class="p">(</span><span class="m">1</span><span class="p">).</span>
+<span class="ss">back</span><span class="p">(</span><span class="m">2</span><span class="p">).</span>
+<span class="ss">wine</span><span class="p">(</span><span class="m">3</span><span class="p">).</span>
+<span class="ss">poison</span><span class="p">(</span><span class="m">4</span><span class="p">).</span>
+
+<span class="ss">hermione</span> <span class="p">:-</span>
+    <span class="nv">Flasks</span> <span class="o">=</span> <span class="p">[</span><span class="nv">First</span><span class="p">,</span> <span class="nv">SecondLeft</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">SecondRight</span><span class="p">,</span> <span class="nv">Last</span><span class="p">],</span>
+    <span class="nv">Sizes</span> <span class="o">=</span> <span class="p">[</span><span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">Dwarf</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">Giant</span><span class="p">,</span> <span class="nv">_</span><span class="p">],</span>    <span class="c1">% Taken from the picture, not mentioned in book.</span>
+    <span class="nv">Flasks</span> <span class="ss">ins</span> <span class="m">1</span><span class="p">..</span><span class="m">4</span><span class="p">,</span>
+    <span class="nv">Flasks</span> <span class="o">=</span> <span class="nv">Sizes</span><span class="p">,</span>
+    <span class="nv">First</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="nv">Last</span><span class="p">,</span>                           <span class="c1">% Different are those who stand at either end,</span>
+    <span class="nv">First</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">1</span><span class="p">,</span>                              <span class="c1">% But if you would move onward,</span>
+    <span class="nv">Last</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">1</span><span class="p">,</span>                               <span class="c1">% neither is your friend;</span>
+    <span class="nv">Dwarf</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">4</span><span class="p">,</span>                              <span class="c1">% Neither dwarf-</span>
+    <span class="nv">Giant</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">4</span><span class="p">,</span>                              <span class="c1">% nor giant holds death in their insides; </span>
+    <span class="nv">SecondLeft</span> <span class="o">#=</span> <span class="nv">SecondRight</span><span class="p">,</span>                <span class="c1">% The second left and the second on the right are twins ..</span>
+    <span class="ss">labeling</span><span class="p">([],</span> <span class="nv">Flasks</span><span class="p">),</span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>                      <span class="c1">% One among us seven will let you move ahead,</span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>                      <span class="c1">% Another will transport the drinker back instead, </span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span>                      <span class="c1">% Two among our number hold only nettle wine,</span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">),</span>                      <span class="c1">% Three of us are killers, waiting hidden in line. (actually implied)</span>
+    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">),</span>              <span class="c1">% However slyly the poison tries to hide, you will always find some on nettle wine’s left side;</span>
+    <span class="ss">write_names</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">),</span> <span class="p">!.</span>
+
+<span class="c1">% Predicate for checking if the estimate contains the correct number of each substance</span>
+<span class="ss">count</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span>
+    <span class="ss">findall</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="p">(</span><span class="ss">member</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="nv">L</span><span class="p">),</span> <span class="nv">P</span> <span class="o">=</span> <span class="nv">X</span><span class="p">),</span> <span class="nv">CP</span><span class="p">),</span>
+    <span class="ss">length</span><span class="p">(</span><span class="nv">CP</span><span class="p">,</span> <span class="nv">N</span><span class="p">).</span>
+
+<span class="c1">% Predicates for checking if there is always poison on "nettle wine's left side"</span>
+<span class="ss">poison_left_of_wine</span><span class="p">([</span><span class="nv">_</span><span class="p">]).</span>
+<span class="ss">poison_left_of_wine</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span>
+    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span>
+    <span class="nv">T</span> <span class="o">=</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">_</span><span class="p">],</span>
+    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">H</span><span class="p">,</span> <span class="nv">X</span><span class="p">).</span>
+<span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">_</span><span class="p">,</span> <span class="nv">W</span><span class="p">)</span> <span class="p">:-</span>
+    <span class="ss">not</span><span class="p">(</span><span class="ss">wine</span><span class="p">(</span><span class="nv">W</span><span class="p">)).</span>
+<span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="nv">_</span><span class="p">)</span> <span class="p">:-</span>
+    <span class="ss">poison</span><span class="p">(</span><span class="nv">P</span><span class="p">).</span>
+
+<span class="c1">% Predicates for writing out the result</span>
+<span class="ss">write_names</span><span class="p">([]).</span>
+<span class="ss">write_names</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span>
+    <span class="p">(</span><span class="ss">ahead</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Ahead Potion"</span><span class="p">);</span>
+    <span class="ss">back</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Back Potion"</span><span class="p">);</span>
+    <span class="ss">wine</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Nettle Wine"</span><span class="p">);</span>
+    <span class="ss">poison</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Poison"</span><span class="p">)),</span>
+    <span class="ss">comma</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span>
+    <span class="ss">write_names</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span> <span class="p">!.</span>
+<span class="ss">comma</span><span class="p">([])</span> <span class="p">:-</span> <span class="p">!.</span>
+<span class="ss">comma</span><span class="p">(</span><span class="nv">_</span><span class="p">)</span> <span class="p">:-</span> <span class="ss">write</span><span class="p">(</span><span class="s2">", "</span><span class="p">).</span>
+</code></pre></div></div>
+
+<p>All we have to do is call her:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?- hermione.
+Poison, Nettle Wine, Ahead Potion, Poison, Poison, Nettle Wine, Back Potion
+true.
+</code></pre></div></div>
+
+<p>Is this fan-fiction?</p>
+
+<hr />
+<p><em>Source of the picture: <a href="https://www.pottermore.com/features/every-harry-potter-puzzle-hermione-solved-that-made-us-kick-ourselves">Pottermore</a></em></p>
+
+
+        <a style="color:#0ab246" href="/2019/08/21/cool-logic.html"><i>Continue reading</i></a>
+    </div>
+    <hr>
+    
+    <div class="post">
+        <h1 class="post-title">
+            <a href="/2019/07/07/bike-ride.html">
+                A mathematical bike ride
+            </a>
+        </h1>
+
+        <span class="post-date">07 Jul 2019</span>
+
+        <p>Here in Duisburg there is a bike-renting service called “Metropolrad Ruhr”. There are many problems with the bikes and far too few stations. There is also a curiosity about the bikes concerning their baskets. The baskets are attached at at the front of the bike in such a way, that it moves with the frame, not the handle. If you’re not used to it, the lack of rotation of the basket when turning the handle, can be very confusing. To illustrate what I mean by this, watch the following short video.</p>
+
+
+
+        <a style="color:#0ab246" href="/2019/07/07/bike-ride.html"><i>Continue reading</i></a>
+    </div>
+    <hr>
+    
+    <div class="post">
+        <h1 class="post-title">
+            <a href="/2019/06/13/hofstadter.html">
+                hofstadter
+            </a>
+        </h1>
+
+        <span class="post-date">13 Jun 2019</span>
+
+        <p>Hofstadter Q-Sequence: https://oeis.org/A005185
+Fractional calculus: https://arxiv.org/abs/1208.2588v1
+https://doi.org/10.1016/j.cam.2012.06.034</p>
+
+<hr />
+<h4 id="footnotes">Footnotes</h4>
+
+
+        <a style="color:#0ab246" href="/2019/06/13/hofstadter.html"><i>Continue reading</i></a>
+    </div>
+    <hr>
+    
+    <div class="post">
+        <h1 class="post-title">
+            <a href="/2019/05/21/approximate-e.html">
+                A simple way to approximate $e$
+            </a>
+        </h1>
+
+        <span class="post-date">21 May 2019</span>
+
+        <p>\begin{align}
+    \frac{22}{7} &amp;= 3.14285714285714…&amp;{} &amp;\approx \pi
+    \\ e^\pi - \pi &amp;= 19.9990999791894…&amp;{} &amp;\approx 20
+\end{align}
+<br />
+\begin{align}
+    &amp;\Rightarrow &amp; e^{\frac{22}{7}} - \frac{22}{7} &amp;\approx 20
+    \\ &amp;\Rightarrow &amp; e^{\frac{22}{7}} &amp;\approx 20 + \frac{22}{7}
+    \\ &amp;\Rightarrow &amp; e &amp;\approx \sqrt[\frac{22}{7}]{20 + \frac{22}{7}}
+    \\ &amp;&amp;&amp;= (20 + \frac{22}{7})^{\frac{7}{22}}
+    \\ &amp;&amp;&amp;= 2.7172692474731…
+\end{align}
+Close enough.</p>
+
+
+        <a style="color:#0ab246" href="/2019/05/21/approximate-e.html"><i>Continue reading</i></a>
+    </div>
+    <hr>
+    
+    <div class="post">
+        <h1 class="post-title">
+            <a href="/2018/12/16/fibonacci.html">
+                Fibonacci spirals and the mind of plants
+            </a>
+        </h1>
+
+        <span class="post-date">16 Dec 2018</span>
+
+        <p>Plants are bimbos. Beautiful, but stupid–at least that’s what most people think. But in this post I want to talk about why I think plants are much more intelligent than people give them credit for. You’ve probably seen the pretty spirally patterns that emerge in many plants when leaves or seeds grow outwards (see figure below). I think they are very interesting and I want to convince you that plants do need to be intelligent to be able to create them.</p>
+
+<p><img src="/assets/fibonacci/plants.png" alt="Plants -fullwidth" /></p>
+
+<p class="caption">Spirals!<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+<p><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<p>A well known fun-fact about these spirals is their connection to the Fibonacci numbers. These are the numbers belonging to the Fibonacci sequence: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …$ (every number is the sum of its two preceding numbers). In plants, these spirals almost always<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> seem to have a Fibonacci number of arms (see the figure below).</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="https://www.flickr.com/photos/colinwarren/158628063/">Source 1</a>, <a href="http://in-lakech-ala-kin.tumblr.com/post/2512330097">Source 2</a>, <a href="https://commons.wikimedia.org/wiki/File:Espiral_de_semillas_de_Girasol.jpg">Source 3</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Swinton, J., Ochu, E., &amp; MSI Turing’s Sunflower Consortium. (2016). <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.160091">Novel Fibonacci and non-Fibonacci structure in the sunflower: results of a citizen science experiment</a>. Royal Society open science, 3(5), 160091. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+        <a style="color:#0ab246" href="/2018/12/16/fibonacci.html"><i>Continue reading</i></a>
+    </div>
+    <hr>
+    
+</div>
+
+<div class="pagination">
+    
+    <a class="pagination-item older" href="/page2">Older</a>
+    
+    
+    <span class="pagination-item newer">Newer</span>
+    
+</div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script id="dsq-count-scr" src="https://onnoeberhard.disqus.com/count.js" async></script>
+<script src="/lightbox/js/lightbox.min.js"></script>
+<script src="/js/script.js"></script>
+        
+    </body>
+
+</html>

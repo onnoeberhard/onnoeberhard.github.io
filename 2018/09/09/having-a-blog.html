@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Blog">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Onno Eberhard" />
+
+    <title>
+         Having a blog &middot; Onno Eberhard 
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103079025-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-103079025-2');
+    </script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+                  displayMath: [ ['$$','$$'], ['\[','\]'] ]},
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+    <body>
+
+        <div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <h1><a href="/">Onno Eberhard</a></h1>
+            <p id="sidetext" class="lead">Blog</p> <!-- Blog -->
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class='sidebar-nav-item'>
+                <a href="/">Home</a>
+            </li>
+
+            
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/about.html">About</a>
+                    </li>
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/archive.html">Archive</a>
+                    </li>
+                
+            
+                
+            
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/projects.html">Projects</a>
+                    </li>
+                
+            
+                
+            
+            <li class='sidebar-nav-item'>
+                <a href="https://onnoeberhard.com">Website</a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-nav" style="overflow: hidden; display:block;">
+            <li style="display: inline-block;">
+                <a href="https://twitter.com/onnoeberhard" target="_blank" class="sideli fab fa-twitter"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://github.com/onnoeberhard" target="_blank" class="sideli fab fa-github"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://www.linkedin.com/in/onnoeberhard" target="_blank" class="sideli fab fa-linkedin"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://medium.com/@onnoeberhard" target="_blank" class="sideli fab fa-medium-m"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="mailto:onnoeberhard@gmail.com" class="sideli fas fa-at"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="/feed.xml" class="sideli fas fa-rss"></a>
+            </li>
+        </ul>
+        
+        <!-- <p>&copy; 2019 &middot; Onno Eberhard</p> -->
+    </div>
+</div>
+
+
+        <div class="content container">
+            <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@onnoeberhard" />
+<meta name="twitter:title" content="Having a blog" />
+<meta name="twitter:description" content="&lt;p&gt;The first rule of writing is “Know your reader.” I don’t know my reader. In fact, there is no reader yet. So this makes things a bit more difficult, but I’ll try my best.&lt;/p&gt;
+
+&lt;p&gt;To get a grasp of the audience, maybe some code can help us analyse the situation. To be realistic, I will assume that there are one million people currently reading this.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; They are randomly distributed on the so-called “Nerd Scale”:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000000&lt;/span&gt;                             &lt;span class=&quot;c1&quot;&gt;# That&#39;s just the beginning!
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initial_readers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# Draw N random people from the global population (normally distributed along nerd scale)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If we plot a histogram of the current readers regarding their nerd factors, this is what we get:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/having-a-blog/initial.png&quot; alt=&quot;Initial Readers -fullwidth&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To clarify how this scale works, one may refer to the table below:&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Proof (live analytics): &lt;img src=&quot;https://img.shields.io/badge/Currently%20reading-~%201%20Million%20People-green.svg&quot; style=&quot;display: inline; margin: 0 0 -4px 0;&quot; /&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+" />
+<meta name="twitter:image" content="http://localhost:4000/assets/having-a-blog/initial.png" />
+
+<div class="post">
+    <h1 class="post-title">Having a blog</h1>
+    <span class="post-date">09 Sep 2018
+        
+    </span>
+    <p>The first rule of writing is “Know your reader.” I don’t know my reader. In fact, there is no reader yet. So this makes things a bit more difficult, but I’ll try my best.</p>
+
+<p>To get a grasp of the audience, maybe some code can help us analyse the situation. To be realistic, I will assume that there are one million people currently reading this.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> They are randomly distributed on the so-called “Nerd Scale”:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>                             <span class="c1"># That's just the beginning!
+</span><span class="n">initial_readers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>    <span class="c1"># Draw N random people from the global population (normally distributed along nerd scale)
+</span></code></pre></div></div>
+
+<p>If we plot a histogram of the current readers regarding their nerd factors, this is what we get:</p>
+
+<p><img src="/assets/having-a-blog/initial.png" alt="Initial Readers -fullwidth" /></p>
+
+<p>To clarify how this scale works, one may refer to the table below:</p>
+
+<!-- more -->
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Nerd Factor</th>
+      <th style="text-align: center">Example<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">-5</td>
+      <td style="text-align: center">A Sperm Whale</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-4</td>
+      <td style="text-align: center">A Bowl of Petunias</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-3</td>
+      <td style="text-align: center">Prostetnic Vogon Jeltz</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-2</td>
+      <td style="text-align: center">Arthur Dent</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">-1</td>
+      <td style="text-align: center">Zaphod Beeblebrox</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">Ford Prefect (the car)</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">Marvin</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">Slartibartfast</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">Trillian</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">Lunkwill and Fook</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">Deep Thought</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All right, because there has now been Python code and H2G2 references, I think it’s probably fair to assume most of our million initial readers have left, because they have better things to do. Good thing that I have nothing better to do than to calculate who left!</p>
+
+<p>To find this out, it’s best to carry out a study where we take a large number of individuals from everywhere on the nerd scale and ask them whether they would continue reading after the first paragraphs. The collected data can then give us a function to predict who of our initial readers left.</p>
+
+<p>This study is easily simulated on a computer:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>         <span class="c1"># 500 carefully chosen individuals that are evenly distributed along the nerd scale
+</span><span class="n">probability</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>    <span class="c1"># Asking them whether they would read on
+</span><span class="n">probability</span> <span class="o">/=</span> <span class="n">probability</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span>    <span class="c1"># Normalizing
+</span></code></pre></div></div>
+
+<p><img src="/assets/having-a-blog/prob.png" alt="Python Tolerance -fullwidth" /></p>
+
+<p>As expected, it seems like more nerdy people stick around with a higher probability. Interestingly, the biggest nerds left, they probably really do have better things to do.</p>
+
+<p>Now we can apply this function to the people from before and see who’s still with us!</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p_still_reading</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">initial_readers</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>       <span class="c1"># Now ask the 'real' readers if they want to continue reading
+</span><span class="n">p_still_reading</span> <span class="o">/=</span> <span class="n">p_still_reading</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span>                 <span class="c1"># Normalize
+</span><span class="n">nerds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">p_still_reading</span><span class="p">,</span> 
+                 <span class="n">initial_readers</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>    <span class="c1"># Filter out those that don't want to continue
+</span></code></pre></div></div>
+
+<p><img src="/assets/having-a-blog/nerds.png" alt="Still reading -fullwidth" /></p>
+
+<p>So even though the maximal probability of reading on was at 3, the mean nerd factor of the remaining readers is below 2, because there were so few 3’s to begin with!</p>
+
+<p>Okay so how many readers are left overall?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"Audience reduced to {(1 - np.sum(np.isnan(nerds)) / N) * 100 :.2f}</span><span class="si">% </span><span class="s">of what was zero to begin with."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Audience reduced to 7.43% of what was zero to begin with.
+</code></pre></div></div>
+
+<p>Ok then, I think that’s enough of that. Thank you for not yet fleeing my site, I hope you had a great day so far. Now that I feel comfortable around my audience, I think it’s time to introduce myself.</p>
+
+<p>I’m Onno (in case you haven’t spotted the tiny subtle letters in the sidebar). By day I study electrical engineering, and by night I usually sleep. Whenever I have too much time or enthusiasm on my hands, I  start a project–like this blog! Some of my biggest projects so far were <a href="https://onnoeberhard.com/epotato">ePotato</a>, <a href="https://onnoeberhard.com/tau">tau</a> and <a href="https://onnoeberhard.com/kevinBacon">6Ω of Separation</a>. These are all projects I worked on for at least a few months, and for each of them I built a separate website. But for most of my smaller projects I don’t have the time to do that, so in the past I just put a link to the GitHub repository on my (now defunct) <a href="https://onnoeberhard.com/archive">archive</a> page.</p>
+
+<p>A lot of the time, I don’t think this is doing these smaller projects justice. Last year I worked about 50 hours on a small project called “Snowflake”; a few LEDs controlled by an ATtiny13A<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>, using pulse width modulation to blink. It was a lot of fun, but much more challenging than I expected! For example, I had to use Assembly to program these things because all my C programs compiled to files too large for the AVR’s memory. I did upload my code to GitHub<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, but what use is that? If somebody were to have the same problems I had building it, I want them to be able to find my solutions. That won’t happen if all there is is a code file hidden somewhere on GitHub.</p>
+
+<p>I have replaced the old archive page with a new <a href="/projects">projects</a> page, where I at least provide a description for each project. But in the future, I want to share my projects more in-depth, that’s why I’m starting this blog. I’ve tried Medium before, for the “6Ω of Separation project”<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>, but I think this Jekyll-powered blog is much more fun. There’s a lot more room for possibilities, for example to embed interactive widgets in posts. Also, Jupyter Notebooks:</p>
+
+<div style="position: relative; width: 100%; margin: -1em auto 1.5em auto;">
+    <iframe width="100%" height="100%" style="position: absolute; top: 0; left: 0; border-style: none;" src="/assets/having-a-blog/rwth.html" onload="this.parentElement.style.paddingBottom = (this.contentWindow.document.documentElement.scrollHeight + 10) + 'px'">
+    </iframe>
+</div>
+
+<p>So we’ll see where this goes, I hope for the best.</p>
+
+<p>Thank you very much for reading my first blog post! I hope to post about once a month, so as to improve my writing skills, and also to force me to engage in projects, so that I have something to write about. You can subscribe via RSS / Atom using the button in the sidebar, but I will probably also crosspost future posts to Medium.</p>
+
+<p>By the way, maybe none of us are nerds, according to the “Nerd Manual”<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup> there are six steps to becoming a real nerd:</p>
+<ul>
+  <li>Raise your GPA to a 3.5,</li>
+  <li>Make one friend who is more physically fit than you are,</li>
+  <li>Make one friend who is better at computer science than you are,</li>
+  <li>Distance yourself from Phil who always talks you into smoking with him,</li>
+  <li>Be able to program mobile apps,</li>
+  <li>Crush the 100 burpee challenge.</li>
+</ul>
+
+<p>So just try to keep that in mind. But don’t be too rude to Phil please.<br /> Who is Phil? Are you Phil?</p>
+
+<hr />
+
+<p><small><a href="/assets/having-a-blog/blog.ipynb"><i>Download the Jupyter Notebook file for this post</i></a></small></p>
+
+<h4 id="footnotes">Footnotes</h4>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Proof (live analytics): <img src="https://img.shields.io/badge/Currently%20reading-~%201%20Million%20People-green.svg" style="display: inline; margin: 0 0 -4px 0;" /> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>It’s been a while since I’ve read the book. If you have an objection, feel free to argue. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>These are amazing, basically a whole computer the size of a fingernail! <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/doc8126.pdf">Datasheet (microchip.com)</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p><a href="https://github.com/onnoeberhard/snowflake/blob/master/snowflake/snowflake.asm">Link (github.com)</a> <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="https://medium.com/@onnoeberhard/6%CF%89-of-separation-af1b67007423">Link (medium.com)</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p><a href="https://www.nerdmanual.com/2017/06/nerd-q-how-do-i-accomplish-this.html">Link (nerdmanual.com)</a> <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<hr>
+
+<div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        <li>
+            <h3>
+                <a href="/2019/08/21/cool-logic.html">
+                    Cool logic in the face of fire
+                    <small>21 Aug 2019</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/2019/07/07/bike-ride.html">
+                    A mathematical bike ride
+                    <small>07 Jul 2019</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/2019/06/13/hofstadter.html">
+                    hofstadter
+                    <small>13 Jun 2019</small>
+                </a>
+            </h3>
+        </li>
+        
+    </ul>
+</div>
+
+<hr>
+ 
+<ul style="padding: 0; overflow: hidden;">
+    <li style="display: inline-block;"><h4>Share:&ensp;</h4></li>
+    <ul style="padding: 0; margin: 0; display: inline-block;">
+        <li style="display: inline-block">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018/09/09/having-a-blog.html" 
+            class="share-button facebook fab fa-facebook" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2018/09/09/having-a-blog.html&via=onnoeberhard" 
+            class="share-button twitter fab fa-twitter" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018/09/09/having-a-blog.html&title=Having a blog"
+            class="share-button linkedin fab fa-linkedin-in" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/2018/09/09/having-a-blog.html&caption=Having a blog"
+            class="share-button tumblr fab fa-tumblr" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://reddit.com/submit?url=http://localhost:4000/2018/09/09/having-a-blog.html&title=Having a blog&resubmit=true"
+            class="share-button reddit fab fa-reddit-alien" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/2018/09/09/having-a-blog.html&t=Having a blog" 
+            class="share-button hacker-news fab" target="_blank">
+            <span style="font-family: 'Open Sans', sans-serif; padding: 0 2px; font-size: .95rem; font-weight: 300">Y</span>
+                <!-- <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><path d="M18.8 3.3c-0.4 0.8-5.6 11.1-5.6 11.2 0 2 0 6.2 0 6.2 -0.1 0-2.2 0-2.3 0 0 0 0-5.9 0-6.2 0 0-5.5-10.9-5.6-11.1C5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3c0 0 0 0 0.1 0 0.9 0 1.7 0 2.6 0 0 0 0 0 0 0.1 0.1 0.1 4 8.3 4.1 8.3 0 0 4.2-8.3 4.3-8.4 0.8 0 1.6 0 2.4 0 0 0 0 0 0 0C18.8 3.3 18.8 3.3 18.8 3.3z"></path></svg> -->
+        </a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://plus.google.com/share?url=http://localhost:4000/2018/09/09/having-a-blog.html" 
+            class="share-button google-plus fab fa-google-plus-g" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a onclick="copyToClipboard('http://localhost:4000/2018/09/09/having-a-blog.html')"
+            class="share-button fas fa-link" style="cursor: pointer"></a>
+        </li>
+    </ul>
+</ul>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_config = function () {
+        this.page.url = "https://blog.onnoeberhard.com";
+        this.page.identifier = "onnoeberhard";
+    };
+    (function () {
+        var d = document,
+            s = d.createElement('script');
+        s.src = 'https://onnoeberhard.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script id="dsq-count-scr" src="https://onnoeberhard.disqus.com/count.js" async></script>
+<script src="/lightbox/js/lightbox.min.js"></script>
+<script src="/js/script.js"></script>
+        
+    </body>
+
+</html>

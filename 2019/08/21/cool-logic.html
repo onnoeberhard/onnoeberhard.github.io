@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Blog">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Onno Eberhard" />
+
+    <title>
+         Cool logic in the face of fire &middot; Onno Eberhard 
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103079025-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-103079025-2');
+    </script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],
+                  displayMath: [ ['$$','$$'], ['\[','\]'] ]},
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+    });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+    <link rel="stylesheet" href="/css/poole.css">
+    <link rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link href="/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+</head>
+
+    <body>
+
+        <div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <h1><a href="/">Onno Eberhard</a></h1>
+            <p id="sidetext" class="lead">Blog</p> <!-- Blog -->
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class='sidebar-nav-item'>
+                <a href="/">Home</a>
+            </li>
+
+            
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/about.html">About</a>
+                    </li>
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/archive.html">Archive</a>
+                    </li>
+                
+            
+                
+            
+                
+            
+                
+                    <li class="sidebar-nav-item">
+                        <a href="/projects.html">Projects</a>
+                    </li>
+                
+            
+                
+            
+            <li class='sidebar-nav-item'>
+                <a href="https://onnoeberhard.com">Website</a>
+            </li>
+        </ul>
+
+        <ul class="sidebar-nav" style="overflow: hidden; display:block;">
+            <li style="display: inline-block;">
+                <a href="https://twitter.com/onnoeberhard" target="_blank" class="sideli fab fa-twitter"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://github.com/onnoeberhard" target="_blank" class="sideli fab fa-github"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://www.linkedin.com/in/onnoeberhard" target="_blank" class="sideli fab fa-linkedin"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="https://medium.com/@onnoeberhard" target="_blank" class="sideli fab fa-medium-m"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="mailto:onnoeberhard@gmail.com" class="sideli fas fa-at"></a>
+            </li>
+            <li style="display: inline-block;">
+                <a href="/feed.xml" class="sideli fas fa-rss"></a>
+            </li>
+        </ul>
+        
+        <!-- <p>&copy; 2019 &middot; Onno Eberhard</p> -->
+    </div>
+</div>
+
+
+        <div class="content container">
+            <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@onnoeberhard" />
+<meta name="twitter:title" content="Cool logic in the face of fire" />
+<meta name="twitter:description" content="&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/syntax_prolog.css&quot; /&gt;
+
+&lt;p style=&quot;margin-left: 20%; margin-right: 20%; font-size: .9rem; font-family: &#39;PT Serif&#39;, serif;&quot;&gt;
+&amp;ldquo;Well, look at it logically,&amp;rdquo; said Hermione, turning to the rest of the group. &amp;ldquo;I mean, Binky didn&#39;t even die today, did he? Lavender just got the news today.&amp;rdquo; &lt;br /&gt;&lt;i&gt;Lavender wailed loudly.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p style=&quot;margin-top: -1rem; margin-left: 20%; font-size: .9rem; margin-right: 20%; text-align: right; font-family: &#39;PT Serif&#39;, serif;&quot;&gt;
+&amp;mdash; Hermione Granger in &lt;i&gt;Prisoner of Azkaban&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Again and again Hermione manages to demonstrate her emotional range being that of a robotic teaspoon. Because of that, I think it would be fair to build our very own Hermione (using Prolog), and try and win ourselves “50 points for Gryffindor”!&lt;/p&gt;
+
+&lt;p&gt;In &lt;em&gt;Philosopher’s Stone&lt;/em&gt;, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/cool-logic/potions.jpg&quot; alt=&quot;Potions -fullwidth&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;i style=&quot;text-align: center; display: block; line-height: 170%&quot;&gt;
+Danger lies before you, while safety lies behind, &lt;br /&gt;
+Two of us will help you, whichever you would find, &lt;br /&gt;
+One among us seven will let you move ahead, &lt;br /&gt;
+Another will transport the drinker back instead, &lt;br /&gt;
+Two among our number hold only nettle wine, &lt;br /&gt;
+Three of us are killers, waiting hidden in line. &lt;br /&gt;
+Choose, unless you wish to stay here forevermore, &lt;br /&gt;
+To help you in your choice, we give you these clues four: &lt;br /&gt;
+First, however slyly the poison tries to hide &lt;br /&gt;
+You will always find some on nettle wine’s left side; &lt;br /&gt;
+Second, different are those who stand at either end, &lt;br /&gt;
+But if you would move onward, neither is your friend; &lt;br /&gt;
+Third, as you see clearly, all are different size, &lt;br /&gt;
+Neither dwarf nor giant holds death in their insides; &lt;br /&gt;
+Fourth, the second left and the second on the right &lt;br /&gt;
+Are twins once you taste them, though different at first sight
+&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;Harry might be the most capable of the lot &lt;em&gt;emotionally&lt;/em&gt;, but sadly he did not win the lottery when it comes to brain power. Because of this, it’ll have to be Hermione who solves Snape’s riddle. Here she is:&lt;/p&gt;
+
+&lt;div class=&quot;language-prolog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;use_module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;clpfd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;
+
+&lt;span class=&quot;ss&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;poison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+
+&lt;span class=&quot;ss&quot;&gt;hermione&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;First&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;SecondLeft&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;SecondRight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Sizes&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Dwarf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Giant&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;% Taken from the picture, not mentioned in book.&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;ins&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Sizes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;First&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;% Different are those who stand at either end,&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;First&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                              &lt;span class=&quot;c1&quot;&gt;% But if you would move onward,&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Last&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                               &lt;span class=&quot;c1&quot;&gt;% neither is your friend;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Dwarf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                              &lt;span class=&quot;c1&quot;&gt;% Neither dwarf-&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;Giant&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                              &lt;span class=&quot;c1&quot;&gt;% nor giant holds death in their insides; &lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;SecondLeft&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;#=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;SecondRight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                &lt;span class=&quot;c1&quot;&gt;% The second left and the second on the right are twins ..&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;labeling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([],&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;                      &lt;span class=&quot;c1&quot;&gt;% One among us seven will let you move ahead,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;                      &lt;span class=&quot;c1&quot;&gt;% Another will transport the drinker back instead, &lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;                      &lt;span class=&quot;c1&quot;&gt;% Two among our number hold only nettle wine,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;                      &lt;span class=&quot;c1&quot;&gt;% Three of us are killers, waiting hidden in line. (actually implied)&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;              &lt;span class=&quot;c1&quot;&gt;% However slyly the poison tries to hide, you will always find some on nettle wine’s left side;&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;write_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Flasks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!.&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;% Predicate for checking if the estimate contains the correct number of each substance&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;member&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;L&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;CP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;% Predicates for checking if there is always poison on &quot;nettle wine&#39;s left side&quot;&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;W&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;poison_left_of_wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;poison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;% Predicates for writing out the result&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;write_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([]).&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;write_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;ahead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Ahead Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Back Potion&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;wine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nettle Wine&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;poison&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Poison&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)),&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;write_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!.&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([])&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!.&lt;/span&gt;
+&lt;span class=&quot;ss&quot;&gt;comma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:-&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;, &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;All we have to do is call her:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;?- hermione.
+Poison, Nettle Wine, Ahead Potion, Poison, Poison, Nettle Wine, Back Potion
+true.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Is this fan-fiction?&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;em&gt;Source of the picture: &lt;a href=&quot;https://www.pottermore.com/features/every-harry-potter-puzzle-hermione-solved-that-made-us-kick-ourselves&quot;&gt;Pottermore&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+
+<div class="post">
+    <h1 class="post-title">Cool logic in the face of fire</h1>
+    <span class="post-date">21 Aug 2019
+        
+    </span>
+    <link rel="stylesheet" href="/css/syntax_prolog.css" />
+
+<p style="margin-left: 20%; margin-right: 20%; font-size: .9rem; font-family: 'PT Serif', serif;">
+&ldquo;Well, look at it logically,&rdquo; said Hermione, turning to the rest of the group. &ldquo;I mean, Binky didn't even die today, did he? Lavender just got the news today.&rdquo; <br /><i>Lavender wailed loudly.</i>
+</p>
+<p style="margin-top: -1rem; margin-left: 20%; font-size: .9rem; margin-right: 20%; text-align: right; font-family: 'PT Serif', serif;">
+&mdash; Hermione Granger in <i>Prisoner of Azkaban</i>
+</p>
+
+<p>Again and again Hermione manages to demonstrate her emotional range being that of a robotic teaspoon. Because of that, I think it would be fair to build our very own Hermione (using Prolog), and try and win ourselves “50 points for Gryffindor”!</p>
+
+<p>In <em>Philosopher’s Stone</em>, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle:</p>
+
+<p><img src="/assets/cool-logic/potions.jpg" alt="Potions -fullwidth" /></p>
+
+<p><i style="text-align: center; display: block; line-height: 170%">
+Danger lies before you, while safety lies behind, <br />
+Two of us will help you, whichever you would find, <br />
+One among us seven will let you move ahead, <br />
+Another will transport the drinker back instead, <br />
+Two among our number hold only nettle wine, <br />
+Three of us are killers, waiting hidden in line. <br />
+Choose, unless you wish to stay here forevermore, <br />
+To help you in your choice, we give you these clues four: <br />
+First, however slyly the poison tries to hide <br />
+You will always find some on nettle wine’s left side; <br />
+Second, different are those who stand at either end, <br />
+But if you would move onward, neither is your friend; <br />
+Third, as you see clearly, all are different size, <br />
+Neither dwarf nor giant holds death in their insides; <br />
+Fourth, the second left and the second on the right <br />
+Are twins once you taste them, though different at first sight
+</i></p>
+
+<p>Harry might be the most capable of the lot <em>emotionally</em>, but sadly he did not win the lottery when it comes to brain power. Because of this, it’ll have to be Hermione who solves Snape’s riddle. Here she is:</p>
+
+<div class="language-prolog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">:-</span> <span class="ss">use_module</span><span class="p">(</span><span class="ss">library</span><span class="p">(</span><span class="ss">clpfd</span><span class="p">)).</span>
+
+<span class="ss">ahead</span><span class="p">(</span><span class="m">1</span><span class="p">).</span>
+<span class="ss">back</span><span class="p">(</span><span class="m">2</span><span class="p">).</span>
+<span class="ss">wine</span><span class="p">(</span><span class="m">3</span><span class="p">).</span>
+<span class="ss">poison</span><span class="p">(</span><span class="m">4</span><span class="p">).</span>
+
+<span class="ss">hermione</span> <span class="p">:-</span>
+    <span class="nv">Flasks</span> <span class="o">=</span> <span class="p">[</span><span class="nv">First</span><span class="p">,</span> <span class="nv">SecondLeft</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">SecondRight</span><span class="p">,</span> <span class="nv">Last</span><span class="p">],</span>
+    <span class="nv">Sizes</span> <span class="o">=</span> <span class="p">[</span><span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">Dwarf</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">_</span><span class="p">,</span> <span class="nv">Giant</span><span class="p">,</span> <span class="nv">_</span><span class="p">],</span>    <span class="c1">% Taken from the picture, not mentioned in book.</span>
+    <span class="nv">Flasks</span> <span class="ss">ins</span> <span class="m">1</span><span class="p">..</span><span class="m">4</span><span class="p">,</span>
+    <span class="nv">Flasks</span> <span class="o">=</span> <span class="nv">Sizes</span><span class="p">,</span>
+    <span class="nv">First</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="nv">Last</span><span class="p">,</span>                           <span class="c1">% Different are those who stand at either end,</span>
+    <span class="nv">First</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">1</span><span class="p">,</span>                              <span class="c1">% But if you would move onward,</span>
+    <span class="nv">Last</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">1</span><span class="p">,</span>                               <span class="c1">% neither is your friend;</span>
+    <span class="nv">Dwarf</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">4</span><span class="p">,</span>                              <span class="c1">% Neither dwarf-</span>
+    <span class="nv">Giant</span> <span class="o">#</span><span class="err">\</span><span class="o">=</span> <span class="m">4</span><span class="p">,</span>                              <span class="c1">% nor giant holds death in their insides; </span>
+    <span class="nv">SecondLeft</span> <span class="o">#=</span> <span class="nv">SecondRight</span><span class="p">,</span>                <span class="c1">% The second left and the second on the right are twins ..</span>
+    <span class="ss">labeling</span><span class="p">([],</span> <span class="nv">Flasks</span><span class="p">),</span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>                      <span class="c1">% One among us seven will let you move ahead,</span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">),</span>                      <span class="c1">% Another will transport the drinker back instead, </span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span>                      <span class="c1">% Two among our number hold only nettle wine,</span>
+    <span class="ss">count</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">,</span> <span class="m">4</span><span class="p">,</span> <span class="m">3</span><span class="p">),</span>                      <span class="c1">% Three of us are killers, waiting hidden in line. (actually implied)</span>
+    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">),</span>              <span class="c1">% However slyly the poison tries to hide, you will always find some on nettle wine’s left side;</span>
+    <span class="ss">write_names</span><span class="p">(</span><span class="nv">Flasks</span><span class="p">),</span> <span class="p">!.</span>
+
+<span class="c1">% Predicate for checking if the estimate contains the correct number of each substance</span>
+<span class="ss">count</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="nv">X</span><span class="p">,</span> <span class="nv">N</span><span class="p">)</span> <span class="p">:-</span>
+    <span class="ss">findall</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="p">(</span><span class="ss">member</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="nv">L</span><span class="p">),</span> <span class="nv">P</span> <span class="o">=</span> <span class="nv">X</span><span class="p">),</span> <span class="nv">CP</span><span class="p">),</span>
+    <span class="ss">length</span><span class="p">(</span><span class="nv">CP</span><span class="p">,</span> <span class="nv">N</span><span class="p">).</span>
+
+<span class="c1">% Predicates for checking if there is always poison on "nettle wine's left side"</span>
+<span class="ss">poison_left_of_wine</span><span class="p">([</span><span class="nv">_</span><span class="p">]).</span>
+<span class="ss">poison_left_of_wine</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span>
+    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span>
+    <span class="nv">T</span> <span class="o">=</span> <span class="p">[</span><span class="nv">X</span><span class="p">|</span><span class="nv">_</span><span class="p">],</span>
+    <span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">H</span><span class="p">,</span> <span class="nv">X</span><span class="p">).</span>
+<span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">_</span><span class="p">,</span> <span class="nv">W</span><span class="p">)</span> <span class="p">:-</span>
+    <span class="ss">not</span><span class="p">(</span><span class="ss">wine</span><span class="p">(</span><span class="nv">W</span><span class="p">)).</span>
+<span class="ss">poison_left_of_wine</span><span class="p">(</span><span class="nv">P</span><span class="p">,</span> <span class="nv">_</span><span class="p">)</span> <span class="p">:-</span>
+    <span class="ss">poison</span><span class="p">(</span><span class="nv">P</span><span class="p">).</span>
+
+<span class="c1">% Predicates for writing out the result</span>
+<span class="ss">write_names</span><span class="p">([]).</span>
+<span class="ss">write_names</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">])</span> <span class="p">:-</span>
+    <span class="p">(</span><span class="ss">ahead</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Ahead Potion"</span><span class="p">);</span>
+    <span class="ss">back</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Back Potion"</span><span class="p">);</span>
+    <span class="ss">wine</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Nettle Wine"</span><span class="p">);</span>
+    <span class="ss">poison</span><span class="p">(</span><span class="nv">H</span><span class="p">),</span> <span class="ss">write</span><span class="p">(</span><span class="s2">"Poison"</span><span class="p">)),</span>
+    <span class="ss">comma</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span>
+    <span class="ss">write_names</span><span class="p">(</span><span class="nv">T</span><span class="p">),</span> <span class="p">!.</span>
+<span class="ss">comma</span><span class="p">([])</span> <span class="p">:-</span> <span class="p">!.</span>
+<span class="ss">comma</span><span class="p">(</span><span class="nv">_</span><span class="p">)</span> <span class="p">:-</span> <span class="ss">write</span><span class="p">(</span><span class="s2">", "</span><span class="p">).</span>
+</code></pre></div></div>
+
+<p>All we have to do is call her:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>?- hermione.
+Poison, Nettle Wine, Ahead Potion, Poison, Poison, Nettle Wine, Back Potion
+true.
+</code></pre></div></div>
+
+<p>Is this fan-fiction?</p>
+
+<hr />
+<p><em>Source of the picture: <a href="https://www.pottermore.com/features/every-harry-potter-puzzle-hermione-solved-that-made-us-kick-ourselves">Pottermore</a></em></p>
+
+</div>
+
+<hr>
+
+<div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        
+        <li>
+            <h3>
+                <a href="/2019/07/07/bike-ride.html">
+                    A mathematical bike ride
+                    <small>07 Jul 2019</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/2019/06/13/hofstadter.html">
+                    hofstadter
+                    <small>13 Jun 2019</small>
+                </a>
+            </h3>
+        </li>
+        
+        <li>
+            <h3>
+                <a href="/2019/05/21/approximate-e.html">
+                    A simple way to approximate $e$
+                    <small>21 May 2019</small>
+                </a>
+            </h3>
+        </li>
+        
+    </ul>
+</div>
+
+<hr>
+ 
+<ul style="padding: 0; overflow: hidden;">
+    <li style="display: inline-block;"><h4>Share:&ensp;</h4></li>
+    <ul style="padding: 0; margin: 0; display: inline-block;">
+        <li style="display: inline-block">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019/08/21/cool-logic.html" 
+            class="share-button facebook fab fa-facebook" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2019/08/21/cool-logic.html&via=onnoeberhard" 
+            class="share-button twitter fab fa-twitter" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019/08/21/cool-logic.html&title=Cool logic in the face of fire"
+            class="share-button linkedin fab fa-linkedin-in" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://tumblr.com/widgets/share/tool?canonicalUrl=http://localhost:4000/2019/08/21/cool-logic.html&caption=Cool logic in the face of fire"
+            class="share-button tumblr fab fa-tumblr" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://reddit.com/submit?url=http://localhost:4000/2019/08/21/cool-logic.html&title=Cool logic in the face of fire&resubmit=true"
+            class="share-button reddit fab fa-reddit-alien" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://news.ycombinator.com/submitlink?u=http://localhost:4000/2019/08/21/cool-logic.html&t=Cool logic in the face of fire" 
+            class="share-button hacker-news fab" target="_blank">
+            <span style="font-family: 'Open Sans', sans-serif; padding: 0 2px; font-size: .95rem; font-weight: 300">Y</span>
+                <!-- <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><path d="M18.8 3.3c-0.4 0.8-5.6 11.1-5.6 11.2 0 2 0 6.2 0 6.2 -0.1 0-2.2 0-2.3 0 0 0 0-5.9 0-6.2 0 0-5.5-10.9-5.6-11.1C5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3c0 0 0 0 0.1 0 0.9 0 1.7 0 2.6 0 0 0 0 0 0 0.1 0.1 0.1 4 8.3 4.1 8.3 0 0 4.2-8.3 4.3-8.4 0.8 0 1.6 0 2.4 0 0 0 0 0 0 0C18.8 3.3 18.8 3.3 18.8 3.3z"></path></svg> -->
+        </a>
+        </li>
+        <li style="display: inline-block;">
+            <a href="https://plus.google.com/share?url=http://localhost:4000/2019/08/21/cool-logic.html" 
+            class="share-button google-plus fab fa-google-plus-g" target="_blank"></a>
+        </li>
+        <li style="display: inline-block;">
+            <a onclick="copyToClipboard('http://localhost:4000/2019/08/21/cool-logic.html')"
+            class="share-button fas fa-link" style="cursor: pointer"></a>
+        </li>
+    </ul>
+</ul>
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_config = function () {
+        this.page.url = "https://blog.onnoeberhard.com";
+        this.page.identifier = "onnoeberhard";
+    };
+    (function () {
+        var d = document,
+            s = d.createElement('script');
+        s.src = 'https://onnoeberhard.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script id="dsq-count-scr" src="https://onnoeberhard.disqus.com/count.js" async></script>
+<script src="/lightbox/js/lightbox.min.js"></script>
+<script src="/js/script.js"></script>
+        
+    </body>
+
+</html>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
-    <link href="https://blog.onnoeberhard.com/feed.xml" rel="self" type="application/atom+xml" />
-    <link href="https://blog.onnoeberhard.com/" rel="alternate" type="text/html" />
-    <updated>2020-01-10T14:49:59+01:00</updated>
-    <id>https://blog.onnoeberhard.com/feed.xml</id>
+    <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+    <updated>2020-01-19T14:08:42+01:00</updated>
+    <id>http://localhost:4000/feed.xml</id>
     <title>Onno Eberhard</title>
     <subtitle>Blog</subtitle>
     <icon>https://onnoeberhard.com/main/salto.png</icon>
@@ -19,11 +19,11 @@
     
         <entry>
             <title>Cool logic in the face of fire</title>
-            <link href="https://blog.onnoeberhard.com/2019/08/21/cool-logic.html" rel="alternate" type="text/html" title="Cool logic in the face of fire"/>
+            <link href="http://localhost:4000/2019/08/21/cool-logic.html" rel="alternate" type="text/html" title="Cool logic in the face of fire"/>
             <updated>2019-08-21T13:07:00+02:00</updated>
             <published>2019-08-21T13:07:00+02:00</published>
-            <id>https://blog.onnoeberhard.com/2019/08/21/cool-logic</id>
-            <content type="html" xml:base="https://blog.onnoeberhard.com/2019/08/21/cool-logic.html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/syntax_prolog.css&quot; /&gt;
+            <id>http://localhost:4000/2019/08/21/cool-logic</id>
+            <content type="html" xml:base="http://localhost:4000/2019/08/21/cool-logic.html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/syntax_prolog.css&quot; /&gt;
 
 &lt;p style=&quot;margin-left: 20%; margin-right: 20%; font-family: 'EB Garamond', serif;&quot;&gt;
 &amp;ldquo;Well, look at it logically,&amp;rdquo; said Hermione, turning to the rest of the group. &amp;ldquo;I mean, Binky didn't even die today, did he? Lavender just got the news today.&amp;rdquo; &lt;br /&gt;&lt;i&gt;Lavender wailed loudly.&lt;/i&gt;
@@ -145,11 +145,11 @@ true.
     
         <entry>
             <title>A simple way to approximate $e$</title>
-            <link href="https://blog.onnoeberhard.com/2019/05/21/approximate-e.html" rel="alternate" type="text/html" title="A simple way to approximate $e$"/>
+            <link href="http://localhost:4000/2019/05/21/approximate-e.html" rel="alternate" type="text/html" title="A simple way to approximate $e$"/>
             <updated>2019-05-21T00:00:00+02:00</updated>
             <published>2019-05-21T00:00:00+02:00</published>
-            <id>https://blog.onnoeberhard.com/2019/05/21/approximate-e</id>
-            <content type="html" xml:base="https://blog.onnoeberhard.com/2019/05/21/approximate-e.html">&lt;p&gt;\begin{align}
+            <id>http://localhost:4000/2019/05/21/approximate-e</id>
+            <content type="html" xml:base="http://localhost:4000/2019/05/21/approximate-e.html">&lt;p&gt;\begin{align}
     \frac{22}{7} &amp;amp;= 3.14285714285714…&amp;amp;{} &amp;amp;\approx \pi
     \\ e^\pi - \pi &amp;amp;= 19.9990999791894…&amp;amp;{} &amp;amp;\approx 20
 \end{align}
@@ -180,11 +180,11 @@ Close enough.&lt;/p&gt;
     
         <entry>
             <title>Fibonacci spirals and the mind of plants</title>
-            <link href="https://blog.onnoeberhard.com/2018/12/16/fibonacci.html" rel="alternate" type="text/html" title="Fibonacci spirals and the mind of plants"/>
+            <link href="http://localhost:4000/2018/12/16/fibonacci.html" rel="alternate" type="text/html" title="Fibonacci spirals and the mind of plants"/>
             <updated>2018-12-21T00:00:00+01:00</updated>
             <published>2018-12-16T00:00:00+01:00</published>
-            <id>https://blog.onnoeberhard.com/2018/12/16/fibonacci</id>
-            <content type="html" xml:base="https://blog.onnoeberhard.com/2018/12/16/fibonacci.html">&lt;p&gt;Plants are bimbos. Beautiful, but stupid–at least that’s what most people think. But in this post I want to talk about why I think plants are much more intelligent than people give them credit for. You’ve probably seen the pretty spirally patterns that emerge in many plants when leaves or seeds grow outwards (see figure below). I think they are very interesting and I want to convince you that plants do need to be intelligent to be able to create them.&lt;/p&gt;
+            <id>http://localhost:4000/2018/12/16/fibonacci</id>
+            <content type="html" xml:base="http://localhost:4000/2018/12/16/fibonacci.html">&lt;p&gt;Plants are bimbos. Beautiful, but stupid–at least that’s what most people think. But in this post I want to talk about why I think plants are much more intelligent than people give them credit for. You’ve probably seen the pretty spirally patterns that emerge in many plants when leaves or seeds grow outwards (see figure below). I think they are very interesting and I want to convince you that plants do need to be intelligent to be able to create them.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/fibonacci/plants.png&quot; alt=&quot;Plants -fullwidth&quot; /&gt;&lt;/p&gt;
 
@@ -670,17 +670,17 @@ But how does it help the plant that there exists this formula to compute the gol
             
             
                 
-                <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.onnoeberhard.com/assets/fibonacci/not_very_good.png" />
+                <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/fibonacci/not_very_good.png" />
             
         </entry>
     
         <entry>
             <title>Having a blog</title>
-            <link href="https://blog.onnoeberhard.com/2018/09/09/having-a-blog.html" rel="alternate" type="text/html" title="Having a blog"/>
+            <link href="http://localhost:4000/2018/09/09/having-a-blog.html" rel="alternate" type="text/html" title="Having a blog"/>
             <updated>2018-09-09T00:00:00+02:00</updated>
             <published>2018-09-09T00:00:00+02:00</published>
-            <id>https://blog.onnoeberhard.com/2018/09/09/having-a-blog</id>
-            <content type="html" xml:base="https://blog.onnoeberhard.com/2018/09/09/having-a-blog.html">&lt;p&gt;The first rule of writing is “Know your reader.” I don’t know my reader. In fact, there is no reader yet. So this makes things a bit more difficult, but I’ll try my best.&lt;/p&gt;
+            <id>http://localhost:4000/2018/09/09/having-a-blog</id>
+            <content type="html" xml:base="http://localhost:4000/2018/09/09/having-a-blog.html">&lt;p&gt;The first rule of writing is “Know your reader.” I don’t know my reader. In fact, there is no reader yet. So this makes things a bit more difficult, but I’ll try my best.&lt;/p&gt;
 
 &lt;p&gt;To get a grasp of the audience, maybe some code can help us analyse the situation. To be realistic, I will assume that there are one million people currently reading this.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; They are randomly distributed on the so-called “Nerd Scale”:&lt;/p&gt;
 
@@ -858,7 +858,7 @@ But how does it help the plant that there exists this formula to compute the gol
             
             
                 
-                <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.onnoeberhard.com/assets/having-a-blog/initial.png" />
+                <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/having-a-blog/initial.png" />
             
         </entry>
     

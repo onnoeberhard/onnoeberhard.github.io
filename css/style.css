@@ -227,7 +227,7 @@ em.prettyh {
     }
 }
 
-.post-back, .post-back:focus  {
+.post-back, .post-back:focus {
     position: absolute;
     color: #000000;
     opacity: .5;

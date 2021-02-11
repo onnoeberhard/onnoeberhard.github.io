@@ -12,6 +12,13 @@ a.sideli {
     transition: opacity 0.3s;
 }
 
+a.ai {
+    display: block;
+    font-size: 1.7rem;
+    position: relative;
+    top: 2px;
+}
+
 a.sideli:hover {
     opacity: 1;
 }

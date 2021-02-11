@@ -42,6 +42,7 @@
 
     <link href="/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 
 </head>
 
@@ -98,10 +99,10 @@
                     <a href="https://github.com/onnoeberhard" target="_blank" class="sideli fab fa-github"></a>
                 </li>
                 <li style="display: inline-block;">
-                    <a href="https://www.linkedin.com/in/onnoeberhard" target="_blank" class="sideli fab fa-linkedin"></a>
+                    <a href="https://scholar.google.com/citations?user=aUGj6FUAAAAJ" target="_blank" class="ai sideli ai-google-scholar"></a>
                 </li>
                 <li style="display: inline-block;">
-                    <a href="https://medium.com/@onnoeberhard" target="_blank" class="sideli fab fa-medium-m"></a>
+                    <a href="https://www.linkedin.com/in/onnoeberhard" target="_blank" class="sideli fab fa-linkedin"></a>
                 </li>
                 <li style="display: inline-block;">
                     <a href="mailto:onnoeberhard@gmail.com" class="sideli fas fa-at"></a>
@@ -111,7 +112,7 @@
                 </li>
             </ul>
             
-            <!-- <p>&copy; 2020 &middot; Onno Eberhard</p> -->
+            <!-- <p>&copy; 2021 &middot; Onno Eberhard</p> -->
         </div>
     </div>
 
@@ -200,17 +201,17 @@ Close enough.</p>
 <p><img src="/assets/fibonacci/plants.png" alt="Plants -fullwidth" /></p>
 
 <p class="caption">Spirals!<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
-<p><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+<p><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup></p>
 
-<p>A well known fun-fact about these spirals is their connection to the Fibonacci numbers. These are the numbers belonging to the Fibonacci sequence: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …$ (every number is the sum of its two preceding numbers). In plants, these spirals almost always<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> seem to have a Fibonacci number of arms (see the figure below).</p>
+<p>A well known fun-fact about these spirals is their connection to the Fibonacci numbers. These are the numbers belonging to the Fibonacci sequence: $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, …$ (every number is the sum of its two preceding numbers). In plants, these spirals almost always<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup> seem to have a Fibonacci number of arms (see the figure below).</p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://www.flickr.com/photos/colinwarren/158628063/">Source 1</a>, <a href="http://in-lakech-ala-kin.tumblr.com/post/2512330097">Source 2</a>, <a href="https://commons.wikimedia.org/wiki/File:Espiral_de_semillas_de_Girasol.jpg">Source 3</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://www.flickr.com/photos/colinwarren/158628063/">Source 1</a>, <a href="http://in-lakech-ala-kin.tumblr.com/post/2512330097">Source 2</a>, <a href="https://commons.wikimedia.org/wiki/File:Espiral_de_semillas_de_Girasol.jpg">Source 3</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>Swinton, J., Ochu, E., &amp; MSI Turing’s Sunflower Consortium. (2016). <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.160091">Novel Fibonacci and non-Fibonacci structure in the sunflower: results of a citizen science experiment</a>. Royal Society open science, 3(5), 160091. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>Swinton, J., Ochu, E., &amp; MSI Turing’s Sunflower Consortium. (2016). <a href="https://royalsocietypublishing.org/doi/full/10.1098/rsos.160091">Novel Fibonacci and non-Fibonacci structure in the sunflower: results of a citizen science experiment</a>. Royal Society open science, 3(5), 160091. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -231,10 +232,10 @@ Close enough.</p>
 
         <p>The first rule of writing is “Know your reader.” I don’t know my reader. In fact, there is no reader yet. So this makes things a bit more difficult, but I’ll try my best.</p>
 
-<p>To get a grasp of the audience, maybe some code can help us analyse the situation. To be realistic, I will assume that there are one million people currently reading this.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> They are randomly distributed on the so-called “Nerd Scale”:</p>
+<p>To get a grasp of the audience, maybe some code can help us analyse the situation. To be realistic, I will assume that there are one million people currently reading this.<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> They are randomly distributed on the so-called “Nerd Scale”:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>                             <span class="c1"># That's just the beginning!
-</span><span class="n">initial_readers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>    <span class="c1"># Draw N random people from the global population (normally distributed along nerd scale)
+</span><span class="n">initial_readers</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>    <span class="c1"># Draw N random people from the global population (normally distributed along nerd scale)
 </span></code></pre></div></div>
 
 <p>If we plot a histogram of the current readers regarding their nerd factors, this is what we get:</p>
@@ -243,10 +244,10 @@ Close enough.</p>
 
 <p>To clarify how this scale works, one may refer to the table below:</p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>Proof (live analytics): <img src="https://img.shields.io/badge/Currently%20reading-~%201%20Million%20People-green.svg" style="display: inline; margin: 0 0 -4px 0;" /> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Proof (live analytics): <img src="https://img.shields.io/badge/Currently%20reading-~%201%20Million%20People-green.svg" style="display: inline; margin: 0 0 -4px 0;" /> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>

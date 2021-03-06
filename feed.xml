@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <link href="https://blog.onnoeberhard.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://blog.onnoeberhard.com/" rel="alternate" type="text/html" />
-    <updated>2021-02-12T12:30:09+01:00</updated>
+    <updated>2021-03-06T13:42:22+01:00</updated>
     <id>https://blog.onnoeberhard.com/feed.xml</id>
     <title>Onno Eberhard</title>
     <subtitle>Blog</subtitle>
@@ -135,41 +135,6 @@ true.
             </author>
             
                 <summary type="html">&amp;ldquo;Well, look at it logically,&amp;rdquo; said Hermione, turning to the rest of the group. &amp;ldquo;I mean, Binky didn't even die today, did he? Lavender just got the news today.&amp;rdquo; Lavender wailed loudly. &amp;mdash; Hermione Granger in Prisoner of Azkaban Again and again Hermione manages to demonstrate her emotional range being that of a robotic teaspoon. Because of that, I think it would be fair to build our very own Hermione (using Prolog), and try and win ourselves “50 points for Gryffindor”! In Philosopher’s Stone, Harry and Hermione find themselves trapped in a chamber on the way to get the stone. There are a number of flasks on a table together with a piece of paper bearing a riddle:</summary>
-            
-            
-            
-
-            
-            
-        </entry>
-    
-        <entry>
-            <title>A simple way to approximate $e$</title>
-            <link href="https://blog.onnoeberhard.com/2019/05/21/approximate-e.html" rel="alternate" type="text/html" title="A simple way to approximate $e$"/>
-            <updated>2019-05-21T00:00:00+02:00</updated>
-            <published>2019-05-21T00:00:00+02:00</published>
-            <id>https://blog.onnoeberhard.com/2019/05/21/approximate-e</id>
-            <content type="html" xml:base="https://blog.onnoeberhard.com/2019/05/21/approximate-e.html">&lt;p&gt;\begin{align}
-    \frac{22}{7} &amp;amp;= 3.14285714285714…&amp;amp;{} &amp;amp;\approx \pi
-    \\ e^\pi - \pi &amp;amp;= 19.9990999791894…&amp;amp;{} &amp;amp;\approx 20
-\end{align}
-&lt;br /&gt;
-\begin{align}
-    &amp;amp;\Rightarrow &amp;amp; e^{\frac{22}{7}} - \frac{22}{7} &amp;amp;\approx 20
-    \\ &amp;amp;\Rightarrow &amp;amp; e^{\frac{22}{7}} &amp;amp;\approx 20 + \frac{22}{7}
-    \\ &amp;amp;\Rightarrow &amp;amp; e &amp;amp;\approx \sqrt[\frac{22}{7}]{20 + \frac{22}{7}}
-    \\ &amp;amp;&amp;amp;&amp;amp;= (20 + \frac{22}{7})^{\frac{7}{22}}
-    \\ &amp;amp;&amp;amp;&amp;amp;= 2.7172692474731…
-\end{align}
-Close enough.&lt;/p&gt;
-</content>
-            <author>
-                <name>Onno Eberhard</name>
-                <uri>https://onnoeberhard.com</uri>
-                <email>onnoeberhard@gmail.com</email>
-            </author>
-            
-                <summary type="html">\begin{align} \frac{22}{7} &amp;amp;= 3.14285714285714…&amp;amp;{} &amp;amp;\approx \pi \\ e^\pi - \pi &amp;amp;= 19.9990999791894…&amp;amp;{} &amp;amp;\approx 20 \end{align} \begin{align} &amp;amp;\Rightarrow &amp;amp; e^{\frac{22}{7}} - \frac{22}{7} &amp;amp;\approx 20 \\ &amp;amp;\Rightarrow &amp;amp; e^{\frac{22}{7}} &amp;amp;\approx 20 + \frac{22}{7} \\ &amp;amp;\Rightarrow &amp;amp; e &amp;amp;\approx \sqrt[\frac{22}{7}]{20 + \frac{22}{7}} \\ &amp;amp;&amp;amp;&amp;amp;= (20 + \frac{22}{7})^{\frac{7}{22}} \\ &amp;amp;&amp;amp;&amp;amp;= 2.7172692474731… \end{align} Close enough.</summary>
             
             
             

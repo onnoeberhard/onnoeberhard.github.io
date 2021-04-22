@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
     <link href="https://blog.onnoeberhard.com/feed.xml" rel="self" type="application/atom+xml" />
     <link href="https://blog.onnoeberhard.com/" rel="alternate" type="text/html" />
-    <updated>2021-03-18T12:56:39+01:00</updated>
+    <updated>2021-04-22T13:45:24+02:00</updated>
     <id>https://blog.onnoeberhard.com/feed.xml</id>
     <title>Onno Eberhard</title>
     <subtitle>Blog</subtitle>
@@ -311,7 +311,9 @@ with $\phi = \frac{1 + \sqrt{5}}{2}$ being the golden ratio. By the way, this ha
 &lt;p&gt;Ok, this looks awful. It’s time for a new plan. Because we know the seed gets placed on the edge of the meristem at the place where there is the most room&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, a good idea may be to construct a sort of energy function $E(\theta)$ along the meristem edge that we then try to minimize. This function must be high (at angle $\theta$), if there is a seed close to the point $r e^{i \theta}$, with $r = 1$ being the radius of the meristem.
 I thought a sum of Gaussian bell curves could do exactly what we want: Each bell corresponds to one old seed, scaled by how far away the seed is:&lt;/p&gt;
 
-\[E(\theta) = \frac{1}{N^a} \sum_{i=1}^{N}{i^a e^{-(N - i + 1)^b (\theta - \theta_i)^2}},\]
+&lt;p&gt;[
+E(\theta) = \frac{1}{N^a} \sum_{i=1}^{N}{i^a e^{-(N - i + 1)^b (\theta - \theta_i)^2}},
+]&lt;/p&gt;
 
 &lt;p&gt;using the parameter $a$ to scale the height of the bell curve, so that it gets smaller the farther away the seed is (low $i$), and $b$ to change the width of the curve, so that it gets wider the closer the seed is to the stem.&lt;/p&gt;
 
@@ -469,7 +471,9 @@ Error:       1.59%
 
 &lt;p&gt;It seems we are not done yet! Maybe it would be better to have a function without parameters, because the less information is needed, the better! Because I still think the Gaussian functions are an elegant way to model how much room there is at a point on the meristem, I kept the energy function as a sum of Gaussians. This is the second try for an energy function:&lt;/p&gt;
 
-\[E(\theta) = \frac{1}{N} \sum_{i=0}^{N - 1}{\frac{1}{1 - \frac{i}{N}} e^{-(\theta - \theta_i)^2}}\]
+&lt;p&gt;[
+E(\theta) = \frac{1}{N} \sum_{i=0}^{N - 1}{\frac{1}{1 - \frac{i}{N}} e^{-(\theta - \theta_i)^2}}
+]&lt;/p&gt;
 
 &lt;p&gt;In the previous function, $b$ specified how the width of the function should change with the distance from the meristem. I thought it would be a good idea to have the bell be broader if the seed was near to the stem, but conversely this also meant that it would get much narrower if it got farther away. This does not seem like it really should be the case, so I just removed the whole term in the exponential function. It is still scaled in a way so that seeds farther from the origin (lower $i$) have a smaller bell, but without the parameter $a$, and in a hyperbolic manner instead of polynomially.&lt;/p&gt;
 

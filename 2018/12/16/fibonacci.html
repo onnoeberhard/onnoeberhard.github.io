@@ -248,7 +248,9 @@ with $\phi = \frac{1 + \sqrt{5}}{2}$ being the golden ratio. By the way, this ha
 <p>Ok, this looks awful. It’s time for a new plan. Because we know the seed gets placed on the edge of the meristem at the place where there is the most room<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote">5</a></sup>, a good idea may be to construct a sort of energy function $E(\theta)$ along the meristem edge that we then try to minimize. This function must be high (at angle $\theta$), if there is a seed close to the point $r e^{i \theta}$, with $r = 1$ being the radius of the meristem.
 I thought a sum of Gaussian bell curves could do exactly what we want: Each bell corresponds to one old seed, scaled by how far away the seed is:</p>
 
-\[E(\theta) = \frac{1}{N^a} \sum_{i=1}^{N}{i^a e^{-(N - i + 1)^b (\theta - \theta_i)^2}},\]
+<p>[
+E(\theta) = \frac{1}{N^a} \sum_{i=1}^{N}{i^a e^{-(N - i + 1)^b (\theta - \theta_i)^2}},
+]</p>
 
 <p>using the parameter $a$ to scale the height of the bell curve, so that it gets smaller the farther away the seed is (low $i$), and $b$ to change the width of the curve, so that it gets wider the closer the seed is to the stem.</p>
 
@@ -406,7 +408,9 @@ Error:       1.59%
 
 <p>It seems we are not done yet! Maybe it would be better to have a function without parameters, because the less information is needed, the better! Because I still think the Gaussian functions are an elegant way to model how much room there is at a point on the meristem, I kept the energy function as a sum of Gaussians. This is the second try for an energy function:</p>
 
-\[E(\theta) = \frac{1}{N} \sum_{i=0}^{N - 1}{\frac{1}{1 - \frac{i}{N}} e^{-(\theta - \theta_i)^2}}\]
+<p>[
+E(\theta) = \frac{1}{N} \sum_{i=0}^{N - 1}{\frac{1}{1 - \frac{i}{N}} e^{-(\theta - \theta_i)^2}}
+]</p>
 
 <p>In the previous function, $b$ specified how the width of the function should change with the distance from the meristem. I thought it would be a good idea to have the bell be broader if the seed was near to the stem, but conversely this also meant that it would get much narrower if it got farther away. This does not seem like it really should be the case, so I just removed the whole term in the exponential function. It is still scaled in a way so that seeds farther from the origin (lower $i$) have a smaller bell, but without the parameter $a$, and in a hyperbolic manner instead of polynomially.</p>
 

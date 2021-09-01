@@ -235,7 +235,7 @@ em.prettyh {
 }
 
 .post-back, .post-back:focus {
-    position: absolute;
+    position: fixed;
     color: #000000;
     opacity: .5;
     margin: 1.5rem;
